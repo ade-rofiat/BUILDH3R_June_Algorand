@@ -28,8 +28,8 @@ send_txn = algorand.send.asset_create(
     AssetCreateParams(
         sender=creator.address,
         total=2000,
-        asset_name="PAINLESS",
-        unit_name="MJD",
+        asset_name="ROFIAT",
+        unit_name="ADE",
         manager=creator.address,
         clawback=creator.address,
         freeze=creator.address
@@ -77,7 +77,7 @@ group_tx.add_asset_transfer(
         sender=creator.address,
         receiver=receiver_acct.address,
         asset_id=asset_id,
-        amount=100
+        amount=50
     )
 )
 
@@ -94,7 +94,7 @@ algorand.send.asset_transfer(
         sender=creator.address,
         receiver=creator.address,
         asset_id=asset_id,
-        amount=15,
+        amount=5,
         clawback_target=receiver_acct.address
     )
 )
